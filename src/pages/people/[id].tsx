@@ -4,9 +4,10 @@ import { useRouter } from 'next/router'
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next'   //Возвращает jsx и указывает, что относится к NextPage типу
 import { ParsedUrlQuery } from 'querystring'
 import { PeopleService } from '@/services/people.service'
+import PeopleDetail from '@/components/screens/home/people-detail/PeopleDetail'
 
 const PeopleDetailPage: NextPage<IPeopleDataSingle> = ({ people }) => {
-  return <PeopleDetailPage people={people}/>
+  return <PeopleDetail people={people}/>
 } 
 
 interface Params extends ParsedUrlQuery{
